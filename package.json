@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wesvanduine/Bamazon#readme",
   "dependencies": {
-    "inquirer": "^3.2.0"
+    "inquirer": "^3.2.0",
+    "mysql": "^2.13.0"
   }
 }
