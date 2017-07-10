@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const Table = require('cli-table');
+const prompt = require('prompt');
 
 //Input connection info for mySQL database
 const connection = mysql.createConnection({
@@ -9,6 +10,10 @@ const connection = mysql.createConnection({
     password: 'Stars4life',
     database: 'bamazon_DB'
 });
+
+
+var productPurchased = [];
+
 
 //Connection to the database
 connection.connect(function(err) {
@@ -30,5 +35,28 @@ connection.connect(function(err) {
         }
         console.log(table.toString());
     });
-
+    purchase();
 });
+
+
+//the purchase function so the user can purchase one of the items listed above
+var purchase = function(){
+    var productInfo = {
+        properties: {
+            itemID: ('Please enter the Item ID of the item you would like to purchase'),
+            Quantity: ('How many items would you like to purchase?')
+        },
+    };
+    prompt.start();
+
+    //gets the responses to the prompts above
+    prompt.get(productInfo, function(err, res) {
+
+        var custPurchase = {
+            itemID: res.itemID,
+            Quantity: res.Quantity
+        };
+        //the variable established above is pushed to the productPurchased array defined at the top of the page
+        productPurchased.push(custPurchase);
+    })
+}
