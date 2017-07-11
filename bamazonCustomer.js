@@ -62,8 +62,8 @@ function purchase() {
             // If the user has selected an invalid item ID, data attay will be empty
             /*console.log('data = ' + JSON.stringify(data));*/
             if (data.length === 0 || data.length > 10) {
-                console.log("'ERROR: Invalid Item ID. Please select a valid Item ID.'")
-                purchase();
+                console.log("'ERROR: Invalid Item ID. Please select a valid Item ID.'");
+                displayInventory();
             } else {
 
                 var productData = data[0];
