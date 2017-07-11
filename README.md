@@ -20,4 +20,4 @@ To run the customer interface please follow the steps below:
 
 
 
-[Bamazon Demo] https://drive.google.com/open?id=0B5hl7DbOULwLT0pnTXFoWnFRM2c
+[Bamazon Demo](https://drive.google.com/open?id=0B5hl7DbOULwLT0pnTXFoWnFRM2c)
