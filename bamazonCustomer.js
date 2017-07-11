@@ -84,11 +84,10 @@ function purchase() {
                         console.log("Thank you for shopping with us");
                         console.log("\n----------------------------------------------------\n");
 
-                        // End the database connection
+                        
                         displayInventory();
-                        connection.end();
 
-                    })
+                    });
 
                 } else {
 
